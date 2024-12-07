@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20221107/pngtree-delicious-indian-food-tray-top-view-mouth-watering-south-delicacy-photo-image_40473976.jpg'); /* Replace with your background image URL */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signup-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .signup-box {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 400px; /* Restrict maximum width */
+    }
+
+    .signup-box img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      background-color: white; /* Placeholder for logo background */
+    }
+
+    .title {
+      color: white;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      color: white;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .signup-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .signup-button:hover {
+      background-color: #e64a19;
+    }
+
+    /* Media Query for larger screens */
+    @media (min-width: 1024px) {
+      .signup-box {
+        padding: 30px 40px;
+        max-width: 350px; /* Reduce form width on larger screens */
+      }
+
+      .title {
+        font-size: 22px;
+      }
+
+      .signup-button {
+        font-size: 14px;
+      }
+
+      .input-field {
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <div class="signup-box">
+      <img src="https://via.placeholder.com/80" alt="Logo"> <!-- Replace with your logo -->
+      <h1 class="title">Let's get started</h1>
+      <p class="subtitle">Create an account</p>
+      <form id="signupForm" action="./signup.php" method="POST">
+        <input type="text" name="name" placeholder="Name" class="input-field" required>
+        <input type="text" name="address" placeholder="Address" class="input-field" required>
+        <input type="tel" name="phone" placeholder="Phone Number" class="input-field" required>
+        <input type="email" name="email" placeholder="Email" class="input-field" required>
+        <input type="password" name="password" placeholder="Password" class="input-field" required>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" class="input-field" required>
+        <button type="submit" class="signup-button">Sign Up</button>
+    </form>
+    
+    </div>
+  </div>
+
+</body>
+</html>

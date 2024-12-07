@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar-light {
+      background-color: #06141B !important; /* Navbar background color */
+    }
+    .navbar-light .navbar-brand,
+    .navbar-light .nav-link {
+      color: white !important; /* Navbar text color */
+    }
+    body {
+      background-color: #0b1f2a;
+      color: white;
+    }
+    .menu-card {
+      background-color: #0b1f2a;
+      border: none;
+      border-radius: 10px;
+    }
+    .menu-card img {
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+    .menu-card .card-body {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 0 0 10px 10px;
+      padding: 10px 15px; /* Adjusted padding */
+    }
+    .menu-card .card-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ffb700;
+    }
+    .menu-card .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ffb700; /* Price color */
+    }
+
+    /* Updated Button Styles */
+    .btn-cart {
+      background-color: #ffd700;  /* Light yellow color */
+      border: none;
+      color: #000;
+      padding: 5px 8px;  /* Smaller padding */
+      border-radius: 20%;  /* Rounded buttons */
+      font-size: 1.2rem;  /* Slightly larger text for clarity */
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .btn-cart:hover {
+      background-color: #ffcc00;  /* Lighter yellow on hover */
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+    }
+    .footer a {
+      color: #ffb700;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .cart-counter {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ffb700;
+    }
+    .cart-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-2">
+    <div class="container">
+      <a class="navbar-brand" href="#">BitesFood</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <span class="cart-counter">Cart: 0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="py-4 text-center bg-dark text-white">
+    <h1>Our Special Menu</h1>
+    <p class="mb-0">Home > Menu</p>
+  </header>
+
+  <!-- Menu Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Menu Card 1 -->
+        <div class="col-md-4">
+          <div class="card menu-card shadow-sm">
+            <img src="menupic/chickenbiryani.webp" class="card-img-top" alt="Chicken Biryani">
+            <div class="card-body text-center">
+              <h5 class="card-title">CHICKEN BIRYANI</h5>
+              <p class="price">$40.00</p>
+              <div class="cart-buttons">
+                <button class="btn-cart btn-add">+</button>
+                <button class="btn-cart btn-remove">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu Card 2 -->
+        <div class="col-md-4">
+          <div class="card menu-card shadow-sm">
+            <img src="menupic/nihari.webp" class="card-img-top" alt="Nihari">
+            <div class="card-body text-center">
+              <h5 class="card-title">NIHARI</h5>
+              <p class="price">$17.56</p>
+              <div class="cart-buttons">
+                <button class="btn-cart btn-add">+</button>
+                <button class="btn-cart btn-remove">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu Card 3 -->
+        <div class="col-md-4">
+          <div class="card menu-card shadow-sm">
+            <img src="menupic/haleem-.webp" class="card-img-top" alt="Haleem">
+            <div class="card-body text-center">
+              <h5 class="card-title">HALEEM</h5>
+              <p class="price">$11.02</p>
+              <div class="cart-buttons">
+                <button class="btn-cart btn-add">+</button>
+                <button class="btn-cart btn-remove">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+         <!-- Menu Card  4-->
+         <div class="col-md-4">
+          <div class="card menu-card shadow-sm">
+            <img src="menupic/BEEFKARAHI.webp" class="card-img-top" alt="Haleem">
+            <div class="card-body text-center">
+              <h5 class="card-title">BEEF KARAHI</h5>
+              <p class="price">$11.02</p>
+              <div class="cart-buttons">
+                <button class="btn-cart btn-add">+</button>
+                <button class="btn-cart btn-remove">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu Card 3 -->
+        <div class="col-md-4">
+          <div class="card menu-card shadow-sm">
+            <img src="menupic/buretto.jpg" class="card-img-top" alt="Haleem">
+            <div class="card-body text-center">
+              <h5 class="card-title">Buretto</h5>
+              <p class="price">$11.02</p>
+              <div class="cart-buttons">
+                <button class="btn-cart btn-add">+</button>
+                <button class="btn-cart btn-remove">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu Card 3 -->
+        <div class="col-md-4">
+          <div class="card menu-card shadow-sm">
+            <img src="menupic/-Noodle-Bowl-2-comp.jpg" class="card-img-top" alt="Haleem">
+            <div class="card-body text-center">
+              <h5 class="card-title">SPAGHETTI</h5>
+              <p class="price">$11.02</p>
+              <div class="cart-buttons">
+                <button class="btn-cart btn-add">+</button>
+                <button class="btn-cart btn-remove">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu Card 3 -->
+        <div class="col-md-4">
+          <div class="card menu-card shadow-sm">
+            <img src="menupic/Rice.jpg" class="card-img-top" alt="Haleem">
+            <div class="card-body text-center">
+              <h5 class="card-title">RICE</h5>
+              <p class="price">$11.02</p>
+              <div class="cart-buttons">
+                <button class="btn-cart btn-add">+</button>
+                <button class="btn-cart btn-remove">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu Card 3 -->
+        <div class="col-md-4">
+          <div class="card menu-card shadow-sm">
+            <img src="menupic/ADOBO.avif" class="card-img-top" alt="Haleem">
+            <div class="card-body text-center">
+              <h5 class="card-title">ADOBO</h5>
+              <p class="price">$11.02</p>
+              <div class="cart-buttons">
+                <button class="btn-cart btn-add">+</button>
+                <button class="btn-cart btn-remove">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu Card 3 -->
+        <div class="col-md-4">
+          <div class="card menu-card shadow-sm">
+            <img src="menupic/QEEMA.webp" class="card-img-top" alt="Haleem">
+            <div class="card-body text-center">
+              <h5 class="card-title">QEEMAA</h5>
+              <p class="price">$11.02</p>
+              <div class="cart-buttons">
+                <button class="btn-cart btn-add">+</button>
+                <button class="btn-cart btn-remove">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu Card 3 -->
+        <div class="col-md-4">
+          <div class="card menu-card shadow-sm">
+            <img src="menupic/Chicken tikka.jpg" class="card-img-top" alt="Haleem">
+            <div class="card-body text-center">
+              <h5 class="card-title">CHICKEN TIKKA</h5>
+              <p class="price">$11.02</p>
+              <div class="cart-buttons">
+                <button class="btn-cart btn-add">+</button>
+                <button class="btn-cart btn-remove">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu Card 3 -->
+        <div class="col-md-4">
+          <div class="card menu-card shadow-sm">
+            <img src="menupic/chowmin.jpg" class="card-img-top" alt="Haleem">
+            <div class="card-body text-center">
+              <h5 class="card-title">CHOWMIN</h5>
+              <p class="price">$11.02</p>
+              <div class="cart-buttons">
+                <button class="btn-cart btn-add">+</button>
+                <button class="btn-cart btn-remove">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu Card 3 -->
+        <div class="col-md-4">
+          <div class="card menu-card shadow-sm">
+            <img src="menupic/CHICEKEN SAJJI.jpg" class="card-img-top" alt="Haleem">
+            <div class="card-body text-center">
+              <h5 class="card-title">CHICKEN SAJJI</h5>
+              <p class="price">$11.02</p>
+              <div class="cart-buttons">
+                <button class="btn-cart btn-add">+</button>
+                <button class="btn-cart btn-remove">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <p>+123 456 7890</p>
+          <p>info@zestyfood.com</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Our Links</h5>
+          <p><a href="#">About Us</a></p>
+          <p><a href="#">Blog</a></p>
+          <p><a href="#">Contact</a></p>
+        </div>
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+          <p><a href="#">Facebook</a></p>
+          <p><a href="#">Instagram</a></p>
+          <p><a href="#">Twitter</a></p>
+        </div>
+        <div class="col-md-3">
+          <h5>Location</h5>
+          <p>123 Food Street, Mardan, Pakistan</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let cartCount = 0;
+
+      const updateCartCounter = () => {
+        document.querySelector(".cart-counter").textContent = `Cart: ${cartCount}`;
+      };
+
+      document.querySelectorAll(".btn-add").forEach((button) => {
+        button.addEventListener("click", () => {
+          cartCount++;
+          updateCartCounter();
+        });
+      });
+
+      document.querySelectorAll(".btn-remove").forEach((button) => {
+        button.addEventListener("click", () => {
+          if (cartCount > 0) {
+            cartCount--;
+            updateCartCounter();
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

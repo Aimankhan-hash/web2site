@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://t4.ftcdn.net/jpg/02/84/46/89/240_F_284468940_1bg6BwgOfjCnE3W0wkMVMVqddJgtMynE.jpg'); /* Replace with your background image URL */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .login-box {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 350px; /* Restricts the form width to 350px */
+    }
+
+    .title {
+      color: white;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .login-box p {
+      color: white;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .forgot-password {
+      display: block;
+      color: #ff5722;
+      text-decoration: none;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    .login-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .login-button:hover {
+      background-color: #e64a19;
+    }
+
+    .signup-text {
+      color: white;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    .signup-link {
+      color: #ff5722;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .signup-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 1024px) {
+      .login-box {
+        padding: 30px 40px;
+        max-width: 300px; /* Makes the form slightly smaller on larger screens */
+      }
+
+      .title {
+        font-size: 22px;
+      }
+
+      .login-button {
+        font-size: 14px;
+      }
+
+      .signup-text {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1 class="title">Ze$TybiTe</h1>
+      <p>Welcome back, login with your account</p>
+      <form id="loginForm" action="php/login.php" method="POST">
+        <input type="email" name="email" placeholder="Email" class="input-field" required>
+        <input type="password" name="password" placeholder="Password" class="input-field" required>
+        <button type="submit" class="login-button">Login</button>
+    </form>
+    
+      <p class="signup-text">Don't have an account? <a href="signup.html" class="signup-link">Sign Up</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Adding functionality for the Login button
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+      // Redirect to the home screen
+      window.location.href = 'home.html'; // Replace 'home.html' with your actual home screen file path
+    });
+  </script>
+</body>
+</html>
